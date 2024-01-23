@@ -10,14 +10,15 @@ public:
 	Fraction(int numerator, int denominator);
 	int numerator(); //returns the numerator of owner object
 	int denominator(); //return the denominator
+	//getters
 	int getNumerator();
 	int getDenominator();
 	void assign(int n, int d); //assigns values to num and denom
 	Fraction add(Fraction f); //returns the sum of the owner object and f.
-	Fraction divide(Fraction f);
-	Fraction mult(Fraction f);
-	Fraction dif(Fraction f);
-	void reduce();
+	Fraction divide(Fraction f);//returns the division of the owner object and f.
+	Fraction mult(Fraction f);//returns the product of the owner object and f.
+	Fraction dif(Fraction f);//returns the difference between the owner object and f.
+	void reduce();//reduces the function to its lowest form
 private:
 	int num;
 	int denom;
@@ -41,6 +42,7 @@ int Fraction::denominator()
 {
 	return denom;
 }
+//Implementation of the getters
 int Fraction::getNumerator()
 {
 	return num;
@@ -49,11 +51,13 @@ int Fraction::getDenominator()
 {
 	return denom;
 }
+//Function to assign values
 void Fraction::assign(int n, int d)
 {
 	num = n;
 	denom = d;
 }
+//Function to add fractions
 Fraction Fraction::add(Fraction f)
 {
 	Fraction sum;
@@ -62,6 +66,7 @@ Fraction Fraction::add(Fraction f)
 	sum.reduce();
 	return sum;
 }
+//Functions to subtract fractions
 Fraction Fraction::dif(Fraction f)
 {
 	Fraction diff;
@@ -70,6 +75,7 @@ Fraction Fraction::dif(Fraction f)
 	diff.reduce();
 	return diff;
 }
+//Function to multiply fractions
 Fraction Fraction::mult(Fraction f)
 {
 	Fraction prod;
@@ -78,6 +84,7 @@ Fraction Fraction::mult(Fraction f)
 	prod.reduce();
 	return prod;
 }
+//Function to divide fractions
 Fraction Fraction::divide(Fraction f)
 {
 	Fraction div;
@@ -86,18 +93,21 @@ Fraction Fraction::divide(Fraction f)
 	div.reduce();
 	return div;
 }
+//Function to reduce fractions to its smallest form
 void Fraction::reduce()
 {
 	int common = gcd(num, denom);
 	num /= common;
 	denom /= common;
 }
+//Function to get the gcd
 int Fraction::gcd(int a, int b)
 {
 	if (b == 0)
 		return a;
 	return gcd(b, a % b);
 }
+//Main function
 int main()
 {
 	Fraction fraction[4];
