@@ -9,7 +9,7 @@ public:
 	Fraction(); //constructor
 	Fraction(int numerator, int denominator);
 	int numerator(); //returns the numerator of owner object
-	int denominator(); //return the denominator
+	int denominator(); //return the denominator.
 	//getters
 	int getNumerator();
 	int getDenominator();
