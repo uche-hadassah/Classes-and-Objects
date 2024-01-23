@@ -1,18 +1,5 @@
-/*Adding to the fraction class on slide 32:
-a) Provide an additional, second constructor for the fraction object that initializes the
-numerator and denominator to some given values.
-b) Add the following functions to the fraction object:
-? divide – returns the quotient of two fractions
-? mult – returns the product
-? dif – returns the difference
-c) Write a public function reduce that reduces the fraction to its simplest form. E.g.
-6/8 should be reduced to 3/4. (To reduce a fraction you divide both the numerator
-and the denominator by the greatest common divisor. You will need the gcd
-function we provided earlier in the course. This should also be a private
-function).
-d) Declare an array of 4 fraction objects, assign values to the data members of each
-one and perform the addition in pairs: first with second, third with fourth. Print
-the 4 fractions, along with the resulting additions.
+/*Name:Uche hadassah
+This project is a continuation of the fractions in slide 32
 */
 #include <iostream>
 using namespace std;
